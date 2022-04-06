@@ -1,0 +1,20 @@
+@import "../abstracts/variables";
+
+.news {
+	h1 {
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+
+	.posts {
+		display: flex;
+		flex-direction: column;
+
+		> article {
+			width: 100%;
+			margin-bottom: 12px;
+			padding: 20px;
+			border: 1px solid $color-green;
+		}
+	}
+}

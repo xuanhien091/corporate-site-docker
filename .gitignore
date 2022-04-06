@@ -1,2 +1,4 @@
 *.log
 node_modules
+
+/wpsite/wp-content/themes/my-theme/assets/css/

@@ -1,0 +1,12 @@
+.navigation {
+	display: flex;
+
+	li {
+		padding: 20px;
+
+		> a {
+			font-weight: 900;
+			text-decoration: none;
+		}
+	}
+}

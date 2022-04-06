@@ -1,3 +1,7 @@
-@import './layouts/common';
-@import './layouts/header.scss';
-@import './layouts/footer.scss';
+@import "./base/common";
+@import "./base/header";
+@import "./base/footer";
+@import "./layouts/home";
+@import "./layouts/contact";
+@import "./layouts/news";
+@import "./layouts/news_content";

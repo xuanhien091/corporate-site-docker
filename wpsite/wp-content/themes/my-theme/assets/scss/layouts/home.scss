@@ -1,0 +1,38 @@
+@import "../abstracts/base";
+
+.home {
+	.feature {
+		background-color: $color-grey;
+
+		h2 {
+			color: $color-white;
+			font-weight: bold;
+		}
+	}
+
+	.plan {
+		background-color: $color-green;
+
+		h2 {
+			color: $color-white;
+			font-weight: bold;
+		}
+	}
+
+	.news {
+		h1 {
+			margin-top: 32px;
+			margin-bottom: 32px;
+		}
+
+		.latest-posts {
+			display: flex;
+
+			.article {
+				width: 25%;
+				padding: 10px;
+				border: 1px solid #f3f3f3;
+			}
+		}
+	}
+}
