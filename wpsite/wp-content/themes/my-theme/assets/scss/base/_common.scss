@@ -1,5 +1,16 @@
 @import "../abstracts/base";
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .container {
   width: 1000px;
   margin: 0 auto;

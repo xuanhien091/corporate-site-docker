@@ -14,7 +14,7 @@ $color-black: var(--color-black);
 $color-grey: var(--color-grey);
 $color-white: var(--color-white);
 
-$font-size-base: 1rem !default; // Assumes the browser default, typically `10px`
+$font-size-base: 1rem !default;
 $w112-font-size: $font-size-base * 11.2 !default;
 $w100-font-size: $font-size-base * 10 !default;
 $w86-font-size: $font-size-base * 8.6 !default;
@@ -44,7 +44,7 @@ $w18-font-size: $font-size-base * 1.8 !default;
 $w16-font-size: $font-size-base * 1.6 !default;
 $w14-font-size: $font-size-base * 1.4 !default;
 $w12-font-size: $font-size-base * 1.2 !default;
-// Mobile
+
 $m70-font-size: $font-size-base * 7 !default;
 $m60-font-size: $font-size-base * 6 !default;
 $m28-font-size: $font-size-base * 2.8 !default;
@@ -54,7 +54,7 @@ $m20-font-size: $font-size-base * 2 !default;
 $m18-font-size: $font-size-base * 1.8 !default;
 $m16-font-size: $font-size-base * 1.6 !default;
 $m12-font-size: $font-size-base * 1.2 !default;
-// font weight
+
 $font-weight-thin: 100 !default;
 $font-weight-extra-light: 200 !default;
 $font-weight-light: 300 !default;
