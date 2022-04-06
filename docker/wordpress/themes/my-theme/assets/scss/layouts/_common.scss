@@ -1,0 +1,11 @@
+@import "../abstracts/base";
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: yellow;
+
+  @include responsive(xl) {
+    width: 80%;
+  }
+}

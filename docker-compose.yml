@@ -1,0 +1,64 @@
+version: "3.3"
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    volumes:
+      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/db/logs:/var/log/mysql"
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    restart: always
+
+  wordpress:
+    image: wordpress:php7.3-fpm-alpine
+    volumes:
+      - ./wpsite:/var/www/html
+      - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    depends_on:
+      - mysql
+    env_file:
+      - .env
+    environment:
+      - WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME}
+      - WORDPRESS_DB_USER=${WORDPRESS_DB_USER}
+      - WORDPRESS_DB_PASSWORD=${WORDPRESS_DB_PASSWORD}
+      - WORDPRESS_TABLE_PREFIX=wp_
+    links:
+      - mysql
+    restart: always
+  phpmyadmin:
+    build: 
+      context: docker/php
+      dockerfile: Dockerfile
+    ports:
+      - "8181:80"
+    depends_on:
+      - mysql
+    env_file:
+      - .env
+    environment:
+      - PMA_HOST=${WORDPRESS_DB_HOST}
+      - MYSQL_ROOT_PASSWORD=myrootpassword
+      - UPLOAD_LIMIT=1G
+    restart: always
+  nginx:
+    container_name: nginx
+    image: nginx:1.17
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./wpsite:/var/www/html
+    links:
+      - wordpress
+    restart: always

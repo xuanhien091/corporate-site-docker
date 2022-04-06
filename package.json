@@ -1,0 +1,17 @@
+{
+  "name": "my-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "stylelint:fix": "stylelint --fix 'wpsite/wp-content/themes/my-theme/assets/scss'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postcss": "^8.4.12",
+    "stylelint": "14.6.1",
+    "stylelint-order": "5.0.0",
+    "stylelint-scss": "^4.2.0"
+  }
+}

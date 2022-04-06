@@ -1,0 +1,56 @@
+{
+  "files.exclude": {
+    "out": false
+  },
+  "search.exclude": {
+    "out": true,
+    "server": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "editor.insertSpaces": false,
+  "editor.tabSize": 2,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.tsc.autoDetect": "off",
+  "typescript.tsserver.trace": "off",
+  "typescript.tsserver.log": "off",
+  "tslint.enable": false,
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.useESLintClass": true,
+  "eslint.codeActionsOnSave.rules": [
+    "@typescript-eslint/semi",
+    "@typescript-eslint/indent",
+    "!@typescript-eslint/*",
+    "*"
+  ],
+  "eslint.workingDirectories": ["./client", "./server"],
+  "eslint.trace.server": "off",
+  "eslint.debug": false,
+  "eslint.lintTask.enable": false,
+  "eslint.format.enable": true,
+  "cSpell.words": [
+    "Affordance",
+    "Autofix",
+    "configurability",
+    "dbaeumer",
+    "eslintignore",
+    "eslintr",
+    "mydirectory",
+    "pnpm",
+    "stylelint",
+    "wpsite"
+  ],
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true
+  }
+}
